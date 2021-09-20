@@ -136,6 +136,7 @@ ul {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
+  cursor: pointer;
 }
 .portfolio-title {
   color: var(--title-text-color);
