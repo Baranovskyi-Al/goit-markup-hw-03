@@ -5,7 +5,12 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
 }
+
 /* Основное */
+
+html {
+  box-sizing: border-box;
+}
 body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
@@ -14,25 +19,44 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
 /* Фон футера */
+
 footer {
   background-color: var(--secondary-background-color);
+  padding-bottom: 60px;
 }
+
 /* Убираем подчеркивания ссылок */
+
 a {
   text-decoration: none;
 }
+
 /* Убираем маркеры списков */
+
 ul {
   list-style-type: none;
 }
+
+/* Делаем изображения блочными эленетами */
+
+img {
+  display: block;
+}
+
 /* Логотип */
+
 .logo {
+  display: block;
   color: var(--accent-color);
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 }
 .header-logo-studio {
   color: #000000;
@@ -40,29 +64,44 @@ ul {
 .footer-logo-studio {
   color: var(--primary-background-color);
 }
+
 /* Ссылки в хедере*/
+
 .address-link {
+  display: block;
   color: var(--text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nav-link {
+  display: block;
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
+
 /* Ссылки в футере */
+
 .footer-address-text,
 .footer-address-link {
   color: var(--primary-background-color);
   font-style: normal;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 .footer-address-link {
   color: rgba(255, 255, 255, 0.6);
 }
+
 /* Интерактивность ссылок */
+
 .nav-link:hover,
 .nav-link:focus,
 .address-link:hover,
@@ -73,7 +112,12 @@ ul {
 .footer-address-link:focus {
   color: var(--accent-color);
 }
+.current {
+  color: var(--accent-color);
+}
+
 /* Шапка */
+
 .section-business {
   background-color: var(--secondary-background-color);
   text-align: center;
@@ -86,24 +130,37 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  padding-top: 200px;
+  margin-bottom: 30px;
 }
+
 /* Кнопки */
+
 .button-service {
+  display: inline-block;
   background-color: var(--accent-color);
   color: var(--primary-background-color);
-  font-family: Roboto;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-bottom: 200px;
 }
+
 /* Раздел особенности */
+
 .heading-visible {
   visibility: hidden;
 }
+
 /* Заголовки секций */
+
 .section-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -127,16 +184,20 @@ ul {
   line-height: 1.19;
   text-align: center;
 }
+
 /* Портфолио */
+
 .portfolio-buttons {
   background-color: #f5f4fa;
   color: var(--title-text-color);
-  font-family: Roboto;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 .portfolio-title {
   color: var(--title-text-color);
@@ -149,9 +210,69 @@ ul {
   font-size: 16px;
   line-height: 1.88;
 }
+
+/* Разметка */
+
+/* Убираем отступы */
+h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер */
+
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+/* Разметка шапки */
+.header {
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ececec;
+  margin-bottom: 50px;
+}
+.nav-flex {
+  display: flex;
+}
+.header-nav-list {
+  display: flex;
+}
+.header-nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-addr-list {
+  display: flex;
+  margin-left: auto;
+}
+.header-addr-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Разметка футера */
+.footer-logo {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+.footer-address .item {
+  margin-bottom: 9px;
+}
+.footer-address .item:last-child {
+  margin-bottom: 0;
 }
