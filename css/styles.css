@@ -157,6 +157,7 @@ img {
 
 .heading-visible {
   visibility: hidden;
+  line-height: 0;
 }
 
 /* Заголовки секций */
@@ -275,4 +276,28 @@ p {
 }
 .footer-address .item:last-child {
   margin-bottom: 0;
+}
+
+/* Разметка секций */
+.section {
+  padding-top: 94px;
+}
+.section:last-child {
+  padding-bottom: 94px;
+}
+
+.specificities {
+  display: flex;
+  padding-top: 74px;
+}
+
+.specificities .item {
+  margin-left: 30px;
+  width: 270px;
+}
+.specificities .item:first-child {
+  margin-left: 0;
+}
+.section-specificities-text {
+  margin-top: 10px;
 }
