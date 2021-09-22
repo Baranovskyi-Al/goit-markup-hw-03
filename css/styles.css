@@ -1,6 +1,7 @@
 :root {
   --primary-background-color: #ffffff;
   --secondary-background-color: #2f303a;
+  --another-bacground-color: #f5f4fa;
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -20,13 +21,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Фон футера */
-
-footer {
-  background-color: var(--secondary-background-color);
-  padding-bottom: 60px;
-}
-
 /* Убираем подчеркивания ссылок */
 
 a {
@@ -43,6 +37,7 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 /* Логотип */
@@ -63,6 +58,13 @@ img {
 }
 .footer-logo-studio {
   color: var(--primary-background-color);
+}
+
+/* Фон футера */
+
+.footer {
+  background-color: var(--secondary-background-color);
+  padding-bottom: 60px;
 }
 
 /* Ссылки в хедере*/
@@ -264,6 +266,7 @@ p {
 }
 
 /* Разметка футера */
+
 .footer-logo {
   display: block;
   padding: 0;
@@ -279,25 +282,67 @@ p {
 }
 
 /* Разметка секций */
+
 .section {
   padding-top: 94px;
-}
-.section:last-child {
   padding-bottom: 94px;
 }
+/* .section:last-child {
+  padding-bottom: 94px;
+} */
+
+/* Секция особенности */
 
 .specificities {
   display: flex;
   padding-top: 74px;
 }
-
 .specificities .item {
-  margin-left: 30px;
-  width: 270px;
+  flex-basis: calc(100% / 4 - 30px);
 }
-.specificities .item:first-child {
-  margin-left: 0;
+.specificities .item:not(:first-child) {
+  margin-left: 30px;
 }
 .section-specificities-text {
   margin-top: 10px;
+}
+
+/* Секция Чем мы занимаемся */
+.works {
+  display: flex;
+  padding-top: 50px;
+}
+.works .item {
+  flex-basis: calc(100% / 3 - 30px);
+}
+.works .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* Секция Наша команда */
+.section-team {
+  background-color: var(--another-bacground-color);
+}
+.team {
+  display: flex;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team .team-card {
+  flex-basis: calc(100% / 4 - 30px);
+}
+.team .team-card:not(:first-child) {
+  margin-left: 30px;
+}
+.team-title {
+  margin-top: 30px;
+}
+.team-text {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.team-card {
+  background-color: var(--primary-background-color);
+  border-radius: 4px;
 }
