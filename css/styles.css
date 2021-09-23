@@ -166,8 +166,6 @@ img {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
-  /* visibility: hidden;
-  line-height: 0; */
 }
 
 /* Заголовки секций */
@@ -209,6 +207,7 @@ img {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  padding: 6px 22px;
 }
 .portfolio-title {
   color: var(--title-text-color);
@@ -216,8 +215,10 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 .portfolio-text {
+  color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
 }
@@ -296,42 +297,43 @@ p {
   padding-bottom: 94px;
 }
 
-/* Секция особенности */
+/* Разметка секции Особенности */
 
 .specificities {
   display: flex;
   padding-top: 74px;
 }
-
-.specificities .item {
+.specificities .specificities-card {
   flex-basis: calc(100% / 4);
 }
-.specificities .item:not(:first-child) {
+.specificities .specificities-card:not(:first-child) {
   margin-left: 30px;
 }
 .section-specificities-text {
   padding-top: 10px;
 }
 
-/* Секция Чем мы занимаемся */
+/* Разметка секции Чем мы занимаемся */
+
 .works {
   display: flex;
   padding-top: 50px;
 }
-.works .item {
+.works .works-card {
   flex-basis: calc(100% / 3);
 }
-.works .item:not(:first-child) {
+.works .works-card:not(:first-child) {
   margin-left: 30px;
 }
 
-/* Секция Наша команда */
+/* Разметка секции Наша команда */
+
 .section-team {
   background-color: var(--another-bacground-color);
 }
 .team {
   display: flex;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -342,13 +344,48 @@ p {
   margin-left: 30px;
 }
 .team-title {
-  margin-top: 30px;
+  padding-top: 30px;
 }
 .team-text {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 .team-card {
   background-color: var(--primary-background-color);
   border-radius: 4px;
+}
+
+/* Разметка портфолио */
+
+/* Фильтры */
+
+.filter {
+  display: flex;
+  justify-content: center;
+}
+.filter .filter-button:not(:first-child) {
+  margin-left: 8px;
+}
+
+/* Список проектов */
+
+.portfolio {
+  display: flex;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 30px);
+  margin-left: calc(-1 * 30px);
+}
+.portfolio .portfolio-card {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.portfolio-card-content {
+  padding: 20px 24px;
+  border-bottom-color: #eeeeee;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
