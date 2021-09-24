@@ -51,7 +51,6 @@ img {
   line-height: 1.19;
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
 }
 .header-logo-studio {
   color: #000000;
@@ -120,10 +119,11 @@ img {
 
 /* Шапка */
 
-.section-business {
+.business {
   background-color: var(--secondary-background-color);
   text-align: center;
 }
+
 .business-title {
   color: var(--primary-background-color);
   font-weight: 900;
@@ -138,7 +138,7 @@ img {
 
 /* Кнопки */
 
-.button-service {
+.business-button {
   display: inline-block;
   background-color: var(--accent-color);
   color: var(--primary-background-color);
@@ -176,6 +176,7 @@ img {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  padding-bottom: 50px;
 }
 .section-specificities-title {
   color: var(--title-text-color);
@@ -197,6 +198,7 @@ img {
 /* Портфолио */
 
 .portfolio-buttons {
+  display: inline-block;
   background-color: #f5f4fa;
   color: var(--title-text-color);
   font-family: inherit;
@@ -255,16 +257,16 @@ p {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #ececec;
-  margin-bottom: 50px;
 }
 .nav-flex {
   display: flex;
 }
 .header-nav-list {
   display: flex;
+  margin-left: 93px;
 }
-.header-nav-list .item:not(:last-child) {
-  margin-right: 50px;
+.header-nav-list .nav-item:not(:first-child) {
+  margin-left: 50px;
 }
 .header-addr-list {
   display: flex;
@@ -299,25 +301,26 @@ p {
 
 /* Разметка секции Особенности */
 
-.specificities {
+.specificities-list {
   display: flex;
-  padding-top: 74px;
 }
-.specificities .specificities-card {
+.specificities-card {
   flex-basis: calc(100% / 4);
 }
-.specificities .specificities-card:not(:first-child) {
+.specificities-card:not(:first-child) {
   margin-left: 30px;
 }
 .section-specificities-text {
   padding-top: 10px;
+}
+.specificities {
+  padding-bottom: 0;
 }
 
 /* Разметка секции Чем мы занимаемся */
 
 .works {
   display: flex;
-  padding-top: 50px;
 }
 .works .works-card {
   flex-basis: calc(100% / 3);
@@ -333,7 +336,6 @@ p {
 }
 .team {
   display: flex;
-  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -385,7 +387,13 @@ p {
 }
 .portfolio-card-content {
   padding: 20px 24px;
+  border-right-color: #eeeeee;
+  border-right-style: solid;
+  border-right-width: 1px;
   border-bottom-color: #eeeeee;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  border-left-color: #eeeeee;
+  border-left-style: solid;
+  border-left-width: 1px;
 }
